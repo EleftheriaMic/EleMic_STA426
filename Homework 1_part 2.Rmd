@@ -1,0 +1,43 @@
+---
+title: "Homework 1"
+author: "Eleftheria"
+date: "9/20/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## log-normal sample
+
+Let's create a sample with 100 observations from the log-normal distribution:
+
+```{r slnorm}
+slnorm<-rlnorm(100, meanlog=0, sdlog=0.25)
+
+```
+
+## Histogram
+
+Let's take a look at the histogram of our previous sample:
+
+```{r hist}
+hist(slnorm, main="Histogram of a random log-normal distribution sample",xlab="observations")
+```
+
+```{r hist2}
+hist(log(slnorm), main="Histogram of a random log-normal distribution sample on the log scale",xlab="log(observations)")
+```
+
+##Mean and Variance of the sample
+
+The mean of the sample is 
+
+```{r mean,echo=FALSE}
+ mean(slnorm)
+```
+and the variance is 
+```{r variance,echo=FALSE}
+var(slnorm)
+```
