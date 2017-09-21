@@ -5,9 +5,6 @@ date: "9/20/2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## log-normal sample
 
@@ -22,11 +19,11 @@ slnorm<-rlnorm(100, meanlog=0, sdlog=0.25)
 
 Let's take a look at the histogram of our previous sample:
 
-```{r hist}
+```{r hist,eval=TRUE}
 hist(slnorm, main="Histogram of a random log-normal distribution sample",xlab="observations")
 ```
 
-```{r hist2}
+```{r hist2,eval=TRUE}
 hist(log(slnorm), main="Histogram of a random log-normal distribution sample on the log scale",xlab="log(observations)")
 ```
 
